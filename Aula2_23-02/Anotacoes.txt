@@ -1,3 +1,7 @@
 TODAS OS EXERCÍCIOS USARÃO OS ARQUIVOS DA AULA 1
 
 Apresentação do conteúdo de JSX
+
+Criação dos exercícios:
+- exemplo-02-expressoes.js
+- exemplo-03-condicionais.js
