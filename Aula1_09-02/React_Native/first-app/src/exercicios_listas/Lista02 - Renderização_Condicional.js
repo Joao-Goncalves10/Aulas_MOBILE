@@ -1,33 +1,31 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
-export default function Lista01() {
-  const linguagem = "JavaScript";
-  const ano = 2025;
-  const preco = 49.9;
-
-  function formatarPreco(valor) {
-    return `R$${valor.toFixed(2)}`;
-  }
+export default function Lista02() {
+    const loja_aberta = true;
+    const tem_promocao = true;
+    const nota = 7.5;
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.titulo}>Lista 01 - JoaoLucas</Text>
+      <Text style={styles.titulo}>Lista 02 - JoaoLucas</Text>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 1 - View com Text</Text>
-        <Text style={styles.texto}>Olá</Text>
-        <Text style={styles.texto}>Mundo</Text>
+        <Text style={styles.label}>Exercício 1 - Operador Ternário</Text>
+        <Text style={styles.texto}>A loja está: {loja_aberta ? "aberta" : "fechada"}</Text>
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 2 - Variáveis no JSX</Text>
-        <Text style={styles.texto}>Linguagem: {linguagem}</Text>
-        <Text style={styles.texto}>Ano: {ano}</Text>
+        <Text style={styles.label}>Exercício 2 - Operador &&</Text>
+        <Text style={styles.texto}>{tem_promocao ? "Promoção ativa! Aproveite os descontos." : ""}</Text>
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 3 - Função no JSX </Text>
-        <Text style={styles.texto}>Preço: {formatarPreco(preco)}</Text>
+        <Text style={styles.label}>Exercício 3 - Condicional com Múltiplas Condições</Text>
+        <Text style={[
+            styles.texto,
+            { color: nota >= 7 ? "green" : nota >= 5 ? "orange" : "red"} ]}>
+                Nota: {nota} - {nota >= 7 ? "Aprovado" : nota>= 5 ? "Recuperação" : Reprovado}
+        </Text>
       </View>
     </ScrollView>
   );
