@@ -1,6 +1,6 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
-export default function Lista00() {
+export default function Lista03() {
     const frutas = ["Maçã", "Banana", "Laranja", "Uva"]
 
     const produtos = [
@@ -29,7 +29,8 @@ export default function Lista00() {
         <Text style={styles.label}>Exercício 2 - Lista de Produtos</Text>
         {produtos.map((produto) => (
           <Text key={produto.id} style={styles.texto}>
-            {produto.nome} - R${produto.preco.toFixed(2)} </Text>
+            {`${produto.nome} - R$ ${produto.preco.toFixed(2)}`}
+          </Text>
         ))}
       </View>
 
