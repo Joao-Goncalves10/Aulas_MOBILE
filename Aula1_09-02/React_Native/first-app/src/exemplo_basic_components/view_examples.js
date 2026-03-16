@@ -5,7 +5,7 @@ export default function ViewScaffold() {
     <View style={styles.container}>
       <Text style={styles.titulo}>1 - Flex Direction</Text>
       <View style={styles.exemplo}>
-        <View style={{flexDirection: "column", height:300, width:300, gap: 10, justifyContent:"center", alignItems:"center"}}>
+        <View style={{flexDirection: "row" /* ou column */, height:300, width:300, gap: 10, justifyContent:"center", alignItems:"center"}}>
             <View style={styles.box} />
             <View style={styles.box} />
             <View style={styles.box} />
@@ -20,20 +20,20 @@ export default function ViewScaffold() {
                 <Text style={styles.textBox}>1</Text>
             </View>
 
-            <View style={[styles.box, {flex:1}]}>
+            <View style={[styles.box, {flex:2}]}>
                 <Text style={styles.textBox}>2</Text>
             </View>
 
-            <View style={[styles.box, {flex:1}]}>
+            <View style={[styles.box, {flex:3}]}>
                 <Text style={styles.textBox}>3</Text>
             </View>
         </View>
       </View>
 
-      <Text style={styles.titulo}>2 - Flex</Text>
+      <Text style={styles.titulo}>2 - Flex </Text>
       <View style={styles.exemplo}>
         <View style={{flexDirection: "row", gap: 8, flexWrap: "wrap"}}>
-        <View style={style.box}></View>
+        <View style={styles.box}></View>
         </View>
         
       </View>
